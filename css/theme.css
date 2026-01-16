@@ -1,0 +1,32 @@
+:root {
+    --color-maroon: #4a0404;
+    --color-gold: #d4af37;
+    --color-gold-bright: #f1c40f;
+    --color-parchment: #f5e6c4;
+    --color-parchment-dark: #dcc289;
+    --color-black: #050505;
+    --color-overlay: rgba(0, 0, 0, 0.7);
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Crimson Text', serif;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-parchment);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .btn-hero, .btn-gold, .tagline {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: 0.3s;
+}

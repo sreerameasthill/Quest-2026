@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatekeeper | Quest 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="hero-section" style="height: 100vh;">
+        <div class="parchment-container">
+            <h2>Gatekeeper Verification</h2>
+            <div class="form-group">
+                <input type="text" id="ticketInput" placeholder="Scan or Enter Ticket ID">
+            </div>
+            <button onclick="verifyTicket()" class="btn-register" style="width: 100%;">Verify Entry</button>
+            <div id="result" style="margin-top: 20px; font-weight: bold; font-size: 1.5rem;"></div>
+        </div>
+    </div>
+
+    <script>
+        async function verifyTicket() {
+            const id = document.getElementById('ticketInput').value;
+            const resDiv = document.getElementById('result');
+            
+            resDiv.innerText = "Checking scrolls...";
+            resDiv.style.color = "var(--color-text)";
+
+            // In a real app, this would hit an API endpoint to check the Google Sheet / Database
+            // For this demo, we can just simulate looking up the Mock Storage or assume valid structure
+            
+            // Mock Validation Logic
+            if (!id.startsWith('Q25-')) {
+                resDiv.innerText = "❌ INVALID TICKET";
+                resDiv.style.color = "red";
+                return;
+            }
+
+            // Simulate Network Delay
+            await new Promise(r => setTimeout(r, 1000));
+
+            const isUsed = Math.random() < 0.2; // 20% chance it's already used for demo
+
+            if (isUsed) {
+                resDiv.innerText = "⚠️ ALREADY CHECKED IN";
+                resDiv.style.color = "orange";
+            } else {
+                resDiv.innerText = "✅ ACCESS GRANTED";
+                resDiv.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

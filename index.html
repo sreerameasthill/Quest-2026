@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest 2026 | Where Strategy Meets Sorcery</title>
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/harry-p" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-snitch"></div>
+            <p>Opening the Gates to Hogwarts...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="assets/xime_logo.png" alt="XIME" class="nav-logo xime">
+                <div class="v-divider"></div>
+                <img src="assets/quest_logo.png" alt="Quest" class="nav-logo quest">
+            </div>
+            
+            <div class="nav-links desktop-only">
+                <a href="#about" class="nav-item">The Quest</a>
+                <a href="#events" class="nav-item">Events</a>
+                <a href="#schedule" class="nav-item">Timeline</a>
+                <a href="#team" class="nav-item">Wizards</a>
+                <a href="#contact" class="nav-item">Owl Post</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger mobile-only">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="tagline fade-in">The Magical Management Fest</p>
+            <div class="title-container">
+                <div class="liquid-box">
+                    <h1 class="main-title" id="liquidTitle">
+                        <span class="morph-item visible">QUEST</span>
+                        <span class="morph-item">क्वेस्ट</span>
+                        <span class="morph-item">குவெஸ்ட்</span>
+                        <span class="morph-item">క్వెస్ట్</span>
+                        <span class="morph-item">কোয়েস্ট</span>
+                    </h1>
+                </div>
+                <div class="static-year fade-in-delay">2026</div>
+            </div>
+            <div class="quote-bar-container">
+                <div class="quote-pill">
+                    <span class="quote-label">/mischief:</span>
+                    <span id="randomQuote" class="quote-text">Loading magical prophecy...</span>
+                    <span class="cursor-blink">|</span>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- MARQUEE SECTION (Ragam Style) -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>QUEST 2026</span>
+            <img src="assets/quest_logo.png" class="marquee-icon">
+            <span>STRATEGY</span>
+            <img src="assets/xime_logo.png" class="marquee-icon">
+            <span>SORCERY</span>
+            <img src="assets/quest_logo.png" class="marquee-icon">
+            <span>INNOVATION</span>
+            <img src="assets/xime_logo.png" class="marquee-icon">
+            <span>MAGIC</span>
+            <img src="assets/quest_logo.png" class="marquee-icon">
+            <span>QUEST 2026</span>
+            <img src="assets/xime_logo.png" class="marquee-icon">
+            <span>STRATEGY</span>
+            <img src="assets/quest_logo.png" class="marquee-icon">
+            <span>SORCERY</span>
+            <img src="assets/xime_logo.png" class="marquee-icon">
+            <span>INNOVATION</span>
+            <img src="assets/quest_logo.png" class="marquee-icon">
+            <span>MAGIC</span>
+        </div>
+    </div>
+
+    <!-- SECTION 2: ABOUT -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <h2 class="section-title reveal-text">The Prophecy</h2>
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <p class="drop-cap">W</p>
+                    <p>elcome to Quest 2026, the premier management fest of XIME Kochi. Here, the sharpest minds gather to test their mettle in a series of enchanting challenges designed to push the boundaries of strategy, innovation, and leadership.</p>
+                    <p>Step into a world where corporate acumen meets the arcane arts. Will you master the spells of negotiation, or brew the perfect potion of profitability?</p>
+                </div>
+                <div class="about-visual reveal-right">
+                    <!-- Interactive Spell Glyph Codex -->
+                    <div class="spell-glyph-wrapper">
+                        <div class="spell-card" id="spellCard">
+                            <div class="spell-glyph-container">
+                                <span class="glyph-symbol" id="glyphSymbol">⚡</span>
+                                <div class="glyph-glow"></div>
+                            </div>
+                            <div class="spell-info">
+                                <h3 class="spell-name" id="spellName">Interact</h3>
+                                <p class="spell-desc" id="spellDesc">Click to discover spells</p>
+                            </div>
+                        </div>
+                        <p class="glyph-caption">Tap to Cast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EVENTS -->
+    <section id="events" class="content-section dark-bg">
+        <div class="container">
+            <h2 class="section-title reveal-text">The Trials</h2>
+            <div class="events-grid" id="eventsGrid">
+                <!-- Events will be dynamically injected here by JS -->
+            </div>
+
+            <!-- Event Details Modal (Hidden by default) -->
+            <div id="eventModal" class="event-modal-overlay" aria-hidden="true">
+                <div class="event-modal-backdrop"></div>
+                <div class="event-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                    <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+                    
+                    <div class="modal-header">
+                        <div class="modal-icon-wrapper">
+                            <span id="modalIcon" class="modal-icon">🏆</span>
+                        </div>
+                        <div class="modal-title-group">
+                            <h2 id="modalTitle" class="modal-title">Event Title</h2>
+                            <p id="modalSubtitle" class="modal-subtitle">Club Name</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="modal-description-section">
+                            <h4 class="modal-section-header">The Prophecy</h4>
+                            <p id="modalDescription" class="modal-text">Event description goes here...</p>
+                        </div>
+
+                        <div class="modal-details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Alliance</span>
+                                <span id="modalType" class="detail-value">Individual</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Trials</span>
+                                <span id="modalRounds" class="detail-value">3 Rounds</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Bounty</span>
+                                <span id="modalPrize" class="detail-value">₹ 10000</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Wizards</span>
+                                <span id="modalEligibility" class="detail-value">Open to All</span>
+                            </div>
+                        </div>
+
+                        <div class="modal-contact-section">
+                            <h4 class="modal-section-header">Owl Post (Contact)</h4>
+                            <div id="modalPocs" class="modal-pocs">
+                                <!-- POCs injected here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="modalRegisterBtn" class="btn-primary-gold">Register for Trial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: SCHEDULE -->
+    <section id="schedule" class="content-section">
+        <div class="container">
+            <h2 class="section-title reveal-text">The Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="time">09:00 AM</div>
+                    <div class="event-info">
+                        <h3>Grand Opening Ceremony</h3>
+                        <p>Great Hall</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="time">10:30 AM</div>
+                    <div class="event-info">
+                        <h3>Round 1: The Sorting Hat</h3>
+                        <p>All Venues</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="time">02:00 PM</div>
+                    <div class="event-info">
+                        <h3>The Golden Snitch Hunt</h3>
+                        <p>Campus Wide</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="time">06:00 PM</div>
+                    <div class="event-info">
+                        <h3>Yule Ball & Cultural Night</h3>
+                        <p>Auditorium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: SPONSORS -->
+    <section id="sponsors" class="content-section dark-bg">
+        <div class="container">
+            <h2 class="section-title reveal-text">Our Patrons</h2>
+            <div class="sponsors-grid text-center reveal-up">
+                <!-- Simple Logo Placeholders -->
+                <div class="sponsor-placeholder">SPONSOR 1</div>
+                <div class="sponsor-placeholder">SPONSOR 2</div>
+                <div class="sponsor-placeholder">SPONSOR 3</div>
+                <div class="sponsor-placeholder">SPONSOR 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: TEAM -->
+    <section id="team" class="content-section">
+        <div class="container">
+            <h2 class="section-title reveal-text">The Council</h2>
+            <div class="team-grid">
+                <div class="team-card reveal-up">
+                    <div class="avatar"></div>
+                    <h3>Albus D.</h3>
+                    <p>Headmaster</p>
+                </div>
+                <div class="team-card reveal-up delay-100">
+                    <div class="avatar"></div>
+                    <h3>Minerva M.</h3>
+                    <p>Event Coordinator</p>
+                </div>
+                <div class="team-card reveal-up delay-200">
+                    <div class="avatar"></div>
+                    <h3>Severus S.</h3>
+                    <p>Logistics Head</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT & FOOTER -->
+    <section id="contact" class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col reveal-left">
+                    <h3>Quest 2026</h3>
+                    <p>XIME Kochi</p>
+                    <p>Kalamassery, Kerala</p>
+                </div>
+                <div class="footer-col reveal-up">
+                    <h3>Contact</h3>
+                    <p>Email: owlpost@quest2026.com</p>
+                    <p>Phone: +91 999 999 9999</p>
+                </div>
+                <div class="footer-col reveal-right">
+                    <h3>Follow the Magic</h3>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Quest Management Fest. Mischief Managed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Elements Container -->
+    <div class="snitch-container">
+        <div class="snitch-wing left"></div>
+        <div class="snitch-body"></div>
+        <div class="snitch-wing right"></div>
+    </div>
+
+    <!-- SVG Filter for Liquid Effect (Ragam Style) -->
+    <svg style="display: none;">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Scripts -->
+    <script src="js/events-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

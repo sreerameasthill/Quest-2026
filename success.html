@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful | Quest 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="hero-section" style="height: 100vh; flex-direction: column;">
+        <div class="parchment-container" style="max-width: 500px; text-align: center;">
+            <h2 style="color: var(--color-maroon);">Registration Complete</h2>
+            <p>Welcome to the Wizard's Assembly.</p>
+            
+            <div id="ticket-area" style="margin: 20px 0;">
+                <canvas id="qr-canvas"></canvas>
+                <p id="ticket-id" style="font-weight: bold; font-size: 1.2rem; margin-top: 10px;"></p>
+            </div>
+
+            <p class="event-desc" style="font-size: 1rem;">
+                A copy of this scroll has been sent to your owl (email).<br>
+                Please present this code at the gates.
+            </p>
+            
+            <a href="index.html" class="btn-register">Return Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Parse Ticket ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const ticketId = urlParams.get('ticket');
+        
+        if (ticketId) {
+            document.getElementById('ticket-id').innerText = ticketId;
+            
+            // Generate QR
+            QRCode.toCanvas(document.getElementById('qr-canvas'), ticketId, function (error) {
+                if (error) console.error(error);
+                console.log('QR Generated');
+            });
+        } else {
+            document.body.innerHTML = '<h1 style="color:white;text-align:center;">No Ticket Found</h1>';
+        }
+    </script>
+</body>
+</html>
