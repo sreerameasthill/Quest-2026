@@ -16,8 +16,14 @@
     <!-- Loading Overlay -->
     <div id="loader" class="loader-overlay">
         <div class="loader-content">
-            <div class="loader-snitch"></div>
-            <p>Opening the Gates to Hogwarts...</p>
+            <h1 class="loader-title">
+                <span class="word">Opening</span>
+                <span class="word">the</span>
+                <span class="word">gates</span>
+                <span class="word">to</span>
+                <span class="word">Hogwarts</span>
+            </h1>
+            <div class="magic-particles"></div>
         </div>
     </div>
 
@@ -70,10 +76,7 @@
                 </div>
             </div>
             
-            <a href="#about" class="scroll-indicator">
-                <span>Explore</span>
-                <svg width="20" height="10" viewBox="0 0 20 10"><path d="M0 0 L10 10 L20 0" stroke="white" fill="none"/></svg>
-            </a>
+
         </div>
     </section>
 
@@ -301,10 +304,20 @@
     </section>
 
     <!-- Interactive Elements Container -->
-    <div class="snitch-container">
-        <div class="snitch-wing left"></div>
-        <div class="snitch-body"></div>
-        <div class="snitch-wing right"></div>
+    <div class="snitch-perspective">
+        <div class="snitch-container" id="snitch">
+            <div class="snitch-shadow"></div>
+            <div class="snitch-wing left">
+                <div class="wing-feather"></div>
+            </div>
+            <div class="snitch-body">
+                <div class="body-highlight"></div>
+                <div class="body-texture"></div>
+            </div>
+            <div class="snitch-wing right">
+                <div class="wing-feather"></div>
+            </div>
+        </div>
     </div>
 
     <!-- SVG Filter for Liquid Effect (Ragam Style) -->

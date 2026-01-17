@@ -1,15 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Quest 2026: Magic Initialized');
 
-    // --- 0. Loader ---
-    window.addEventListener('load', () => {
+    // --- 0. Magical Text Loader ---
+    const initLoader = () => {
         const loader = document.getElementById('loader');
-        if(loader) {
-            setTimeout(() => {
-                loader.classList.add('hidden');
-            }, 1000); // 1s visible wait
+        if (!loader) return;
+
+        const hasPlayed = sessionStorage.getItem('loaderPlayed');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Skip if already played
+        if (hasPlayed) {
+            loader.style.display = 'none';
+            document.body.classList.add('loaded');
+            return;
         }
-    });
+
+        // Reduced Motion: Instant reveal
+        if (prefersReducedMotion) {
+            loader.classList.add('hidden');
+            document.body.classList.add('loaded');
+            sessionStorage.setItem('loaderPlayed', 'true');
+            setTimeout(() => loader.style.display = 'none', 800);
+            return;
+        }
+
+        // Magical text animation (3 seconds total)
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            document.body.classList.add('loaded');
+            sessionStorage.setItem('loaderPlayed', 'true');
+            
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 800);
+        }, 3000);
+    };
+
+    initLoader();
 
     // --- 1. Background Randomizer ---
     const backgrounds = [
@@ -103,13 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- 5. Snitch Logic (Mobile & Desktop) ---
+    // --- 5. Premium Snitch Logic (Mobile & Desktop) ---
     const snitch = document.querySelector('.snitch-container');
     if (snitch) {
         let mouseX = window.innerWidth / 2;
         let mouseY = window.innerHeight / 2;
         let snitchX = window.innerWidth / 2;
         let snitchY = window.innerHeight / 2;
+        let time = 0;
 
         const updateCoordinates = (x, y) => {
             mouseX = x;
@@ -123,27 +152,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mobile Touch
         document.addEventListener('touchmove', (e) => {
-            // Prevent scrolling while playing with snitch if needed, careful though
-            // e.preventDefault(); 
             const touch = e.touches[0];
             updateCoordinates(touch.clientX, touch.clientY);
         }, { passive: true });
 
         function animateSnitch() {
-            // Easing
-            snitchX += (mouseX - snitchX) * 0.1;
-            snitchY += (mouseY - snitchY) * 0.1;
-            
-            // Jitter
-            const jitterX = Math.random() * 5 - 2.5;
-            const jitterY = Math.random() * 5 - 2.5;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                snitch.style.left = mouseX + 'px';
+                snitch.style.top = mouseY + 'px';
+                return;
+            }
 
-            // Apply (-30 for center offset based on 60px width)
-            snitch.style.left = (snitchX + jitterX - 30) + 'px';
-            snitch.style.top = (snitchY + jitterY - 30) + 'px';
-            
-            const deltaX = mouseX - snitchX;
-            snitch.style.transform = `rotate(${deltaX * 0.5}deg)`;
+            time += 0.05;
+
+            // Smooth following with easing
+            const easing = 0.12;
+            snitchX += (mouseX - snitchX) * easing;
+            snitchY += (mouseY - snitchY) * easing;
+
+            // Organic Bobbing (2D only)
+            const bobX = Math.sin(time * 0.7) * 3;
+            const bobY = Math.cos(time * 0.8) * 6;
+
+            // Apply 2D transform (adjusted for smaller size)
+            snitch.style.transform = `translate(${snitchX + bobX - 30}px, ${snitchY + bobY - 30}px)`;
 
             requestAnimationFrame(animateSnitch);
         }
