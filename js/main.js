@@ -398,4 +398,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 200);
         });
     }
+
+    // --- 8. Mobile Navigation Toggle ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            console.log('Mobile menu toggled:', isActive);
+        });
+
+        mobileNavItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
 });
