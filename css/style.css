@@ -60,7 +60,7 @@ ul { list-style: none; }
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     transition: all 0.4s ease;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
@@ -69,7 +69,7 @@ ul { list-style: none; }
 
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.98);
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
 }
@@ -455,9 +455,14 @@ ul { list-style: none; }
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-.marquee-icon {
-    height: 40px;
+ .marquee-icon {
+    height: 54px; /* Increased by 35% */
     width: auto;
+}
+
+.xime-marquee {
+    filter: none !important; /* Ensure the white logo doesn't get filters */
+    height: 45px;
 }
 
 @keyframes scrollMarquee {
@@ -465,37 +470,54 @@ ul { list-style: none; }
     100% { transform: translateX(-50%); }
 }
 
-/* --- EVENTS GRID (Now Horizontal Carousel) --- */
+/* --- EVENTS GRID (Now Row-Based Grids) --- */
+.category-row {
+    margin-bottom: 6rem;
+}
+
+.experiences-row {
+    margin-top: 4rem;
+    padding: 4rem 0;
+    background: rgba(212, 175, 55, 0.03);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
 .events-grid {
     display: flex;
     overflow-x: auto;
     gap: 2rem;
     padding: 2rem 5%;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Hide scrollbar Firefox */
-    -ms-overflow-style: none;  /* Hide scrollbar IE */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) transparent;
 }
 
 .events-grid::-webkit-scrollbar { 
-    display: none; 
+    height: 4px;
+}
+
+.events-grid::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 10px;
 }
 
 .event-card {
-    min-width: 300px; /* Fixed width for carousel items */
+    min-width: 320px;
     scroll-snap-align: center;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 2rem;
+    padding: 2.5rem;
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    /* Ragam style tall cards */
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/5;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 12px;
 }
 
 .event-card:hover {
@@ -1123,6 +1145,7 @@ body.loaded footer {
     margin-bottom: 2rem;
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     padding-bottom: 1.5rem;
+    padding-right: 3rem; /* Prevent overlap with absolute close button */
 }
 
 .modal-icon-wrapper {
@@ -1147,12 +1170,13 @@ body.loaded footer {
 
 .modal-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     background: linear-gradient(to right, #fff, #aaa);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.1;
 }
 
 .modal-subtitle {
@@ -1394,6 +1418,8 @@ body.menu-open {
     text-align: center;
 }
 
+
+
 .hero-cta-group {
     margin-top: 2.5rem;
     text-align: center;
@@ -1414,6 +1440,54 @@ body.menu-open {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
     display: inline-block;
     text-decoration: none;
+}
+
+/* --- TYPEWRITER QUOTE MODULE --- */
+.quote-container {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: var(--color-gold); /* Updated to theme gold */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    min-height: 3.5rem; /* Reserve space for 2 lines likely */
+    display: flex; /* Centering content */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    line-height: 1.5;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: var(--color-gold);
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .quote-container {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+        margin-top: 1.5rem;
+        width: 90%;
+    }
 }
 
 .btn-primary-gold:hover {
@@ -1489,13 +1563,155 @@ body.menu-open {
     left: 0;
 }
 
-/* Grouped Events */
+/* Foldable Cards Styles */
+.foldable-info-section {
+    padding: 4rem 0;
+}
+
+.info-fold-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.info-fold-card {
+    background: rgba(20, 10, 10, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 70px; /* Header height approx */
+}
+
+.info-fold-card.active {
+    height: auto;
+    background: rgba(20, 10, 10, 0.8);
+    border-color: var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.fold-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(212, 175, 55, 0.05);
+    transition: background 0.3s;
+}
+
+.fold-header:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.fold-header h3 {
+    font-family: var(--font-subheading);
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.fold-icon {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+    transition: transform 0.3s ease;
+}
+
+.info-fold-card.active .fold-icon {
+    transform: rotate(180deg);
+}
+
+.fold-content {
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.info-fold-card.active .fold-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Coordinators Section Styles */
+/* Coordinators Section Styles */
+.coordinators-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem; /* Space for scrollbar */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) transparent;
+}
+
+.coordinators-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.coordinators-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.coordinators-grid::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 3px;
+}
+
+.coord-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    min-width: 280px; /* Fixed width for carousel items */
+    scroll-snap-align: center;
+}
+
+.coord-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.coord-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.coord-card h3 {
+    font-family: var(--font-subheading);
+    font-size: 1.3rem;
+    color: var(--color-parchment);
+    margin-bottom: 0.5rem;
+}
+
+.coord-phone {
+    font-family: 'Courier New', monospace;
+    color: var(--color-gold);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Category Header Enhancements */
+.category-row {
+    position: relative;
+    width: 100%;
+}
+
 .category-header {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     text-align: center;
     color: var(--color-gold);
-    margin: 5rem 0 3rem;
+    margin: 4rem 0 2.5rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     position: relative;
@@ -1512,16 +1728,7 @@ body.menu-open {
 }
 
 .sub-category-header {
-    width: 100%;
-    font-family: var(--font-subheading);
-    font-size: 1.6rem;
-    color: var(--color-gold);
-    margin: 4rem 0 2rem;
-    padding-left: 1.5rem;
-    border-left: 4px solid var(--color-gold);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    background: linear-gradient(to right, rgba(212, 175, 55, 0.1), transparent);
+    display: none; /* Removed as we now have row headers */
 }
 
 .competition-wrapper, .standalone-events-wrapper {

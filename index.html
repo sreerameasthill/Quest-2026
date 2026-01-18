@@ -80,6 +80,11 @@
             <div class="hero-cta-group fade-in-delay-more">
                 <a href="#register" class="btn-primary-gold">Register Now</a>
             </div>
+            
+            <!-- Typewriter Quote Module -->
+            <div class="quote-container">
+                <span id="typewriter-text"></span><span class="cursor">|</span>
+            </div>
         </div>
     </section>
 
@@ -89,19 +94,19 @@
             <span>QUEST 2026</span>
             <img src="assets/quest_logo.png" class="marquee-icon">
             <span>STRATEGY</span>
-            <img src="assets/xime_logo.png" class="marquee-icon">
+            <img src="assets/xime_marquee_logo.png" class="marquee-icon xime-marquee">
             <span>SORCERY</span>
             <img src="assets/quest_logo.png" class="marquee-icon">
             <span>INNOVATION</span>
-            <img src="assets/xime_logo.png" class="marquee-icon">
+            <img src="assets/xime_marquee_logo.png" class="marquee-icon xime-marquee">
             <span>MAGIC</span>
             <img src="assets/quest_logo.png" class="marquee-icon">
             <span>QUEST 2026</span>
-            <img src="assets/xime_logo.png" class="marquee-icon">
+            <img src="assets/xime_marquee_logo.png" class="marquee-icon xime-marquee">
             <span>STRATEGY</span>
             <img src="assets/quest_logo.png" class="marquee-icon">
             <span>SORCERY</span>
-            <img src="assets/xime_logo.png" class="marquee-icon">
+            <img src="assets/xime_marquee_logo.png" class="marquee-icon xime-marquee">
             <span>INNOVATION</span>
             <img src="assets/quest_logo.png" class="marquee-icon">
             <span>MAGIC</span>
@@ -162,38 +167,47 @@
         </div>
     </section>
 
-    <!-- CHAMPIONSHIP TROPHY SECTION -->
-    <section class="championship-section">
+    <!-- INFO FOLDABLE CARDS SECTION -->
+    <section class="foldable-info-section">
         <div class="container">
-            <h2 class="section-title reveal-text">Overall Championship Trophy</h2>
-            <div class="championship-content reveal-up">
-                <p>As Quest 2026 presents the Overall Championship Trophy, the following criteria will determine the winning college:</p>
-                <ul class="championship-list">
-                    <li>Total footfall representing each college</li>
-                    <li>Positions secured by the college teams across various events</li>
-                    <li>Social media promotions with official XIME Kochi and Quest 2026 tags</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <div class="info-fold-grid">
+                <!-- Championship Fold -->
+                <div class="info-fold-card" id="trophyFold">
+                    <div class="fold-header">
+                        <h3>Overall Championship Trophy</h3>
+                        <span class="fold-icon">▼</span>
+                    </div>
+                    <div class="fold-content">
+                        <p>As Quest 2026 presents the Overall Championship Trophy, the following criteria will determine the winning college:</p>
+                        <ul class="championship-list">
+                            <li>Total footfall representing each college</li>
+                            <li>Positions secured by the college teams across various events</li>
+                            <li>Social media promotions with official XIME Kochi and Quest 2026 tags</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- GUIDELINES SECTION -->
-    <section class="guidelines-section dark-bg">
-        <div class="container">
-            <h2 class="section-title reveal-text">General Guidelines</h2>
-            <div class="guidelines-content reveal-up">
-                <ul class="guidelines-list">
-                    <li>All participants must carry their college identity cards for verification.</li>
-                    <li>Discipline and decorum are expected to be maintained throughout the fest.</li>
-                    <li>Participants are reQuested to follow a decent and appropriate dress code.</li>
-                    <li>Mobile phone usage during events is strictly prohibited, unless explicitly permitted by the organizers.</li>
-                    <li>The consumption or possession of alcohol, cigarettes, or any prohibited substances on campus is strictly forbidden.</li>
-                    <li>XIME-issued ID cards must always be worn within the campus premises.</li>
-                    <li>Accommodation support is available at the following rates: <br> Non-A/C Room: Rs. 499 per head per night <br> A/C Room: Rs. 649 per head per night <br> (Both options include 2 days of transportation.)</li>
-                    <li>A team is permitted to participate in only one management event.</li>
-                    <li>Any form of misconduct or violation of rules will result in immediate disqualification.</li>
-                    <li><strong>Early Bird Special:</strong> Register by February 20th to unlock exclusive benefits. Early registrants will enjoy special incentives, including food coupons and exciting goodies.</li>
-                </ul>
+                <!-- Guidelines Fold -->
+                <div class="info-fold-card" id="guidelinesFold">
+                    <div class="fold-header">
+                        <h3>General Guidelines</h3>
+                        <span class="fold-icon">▼</span>
+                    </div>
+                    <div class="fold-content">
+                        <ul class="guidelines-list">
+                            <li>All participants must carry their college identity cards for verification.</li>
+                            <li>Discipline and decorum are expected to be maintained throughout the fest.</li>
+                            <li>Participants are reQuested to follow a decent and appropriate dress code.</li>
+                            <li>Mobile phone usage during events is strictly prohibited, unless explicitly permitted by the organizers.</li>
+                            <li>The consumption or possession of alcohol, cigarettes, or any prohibited substances on campus is strictly forbidden.</li>
+                            <li>XIME-issued ID cards must always be worn within the campus premises.</li>
+                            <li>Accommodation support is available at the following rates: <br> Non-A/C Room: Rs. 499 per head per night <br> A/C Room: Rs. 649 per head per night <br> (Both options include 2 days of transportation.)</li>
+                            <li>A team is permitted to participate in only one management event.</li>
+                            <li>Any form of misconduct or violation of rules will result in immediate disqualification.</li>
+                            <li><strong>Early Bird Special:</strong> Register by February 20th to unlock exclusive benefits. Early registrants will enjoy special incentives, including food coupons and exciting goodies.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -203,147 +217,54 @@
         <div class="container">
             <h2 class="section-title reveal-text">The Trials</h2>
             
-            <div class="competition-wrapper">
-                <h3 class="category-header reveal-up">Competition</h3>
-                <div class="events-grid" id="eventsGrid">
-                    <!-- Categorized events injected here -->
-                </div>
+            <div class="category-row">
+                <h3 class="category-header reveal-up">Management Events</h3>
+                <div class="events-grid" id="mgmtGrid"></div>
             </div>
 
-            <div class="standalone-events-wrapper">
-                <h3 class="category-header reveal-up">Experiences</h3>
-                <div class="events-grid" id="experienceGrid">
-                    <!-- Standalone events injected here -->
-                </div>
+            <div class="category-row">
+                <h3 class="category-header reveal-up">Cultural & Creative Events</h3>
+                <div class="events-grid" id="culturalGrid"></div>
             </div>
 
-            <!-- Event Details Modal (Remains same) -->
-            <div id="eventModal" class="event-modal-overlay" aria-hidden="true">
-                <div class="event-modal-backdrop"></div>
-                <div class="event-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-                    <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
-                    
-                    <div class="modal-header">
-                        <div class="modal-icon-wrapper">
-                            <span id="modalIcon" class="modal-icon">🏆</span>
-                        </div>
-                        <div class="modal-title-group">
-                            <h2 id="modalTitle" class="modal-title">Event Title</h2>
-                            <p id="modalSubtitle" class="modal-subtitle">Club Name</p>
-                        </div>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="modal-description-section">
-                            <h4 class="modal-section-header">The Prophecy</h4>
-                            <p id="modalDescription" class="modal-text">Event description goes here...</p>
-                        </div>
-
-                        <div class="modal-details-grid">
-                            <div class="detail-item">
-                                <span class="detail-label">Alliance</span>
-                                <span id="modalType" class="detail-value">Individual</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Trials</span>
-                                <span id="modalRounds" class="detail-value">3 Rounds</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Bounty</span>
-                                <span id="modalPrize" class="detail-value">₹ 10000</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Wizards</span>
-                                <span id="modalEligibility" class="detail-value">Open to All</span>
-                            </div>
-                        </div>
-
-                        <div class="modal-contact-section">
-                            <h4 class="modal-section-header">Owl Post (Contact)</h4>
-                            <div id="modalPocs" class="modal-pocs">
-                                <!-- POCs injected here -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button id="modalRegisterBtn" class="btn-primary-gold">Register for Trial</button>
-                    </div>
-                </div>
+            <div class="category-row">
+                <h3 class="category-header reveal-up">Sports Events</h3>
+                <div class="events-grid" id="sportsGrid"></div>
             </div>
+
+            <div class="category-row experiences-row">
+                <h3 class="category-header reveal-up">Experience Centre</h3>
+                <div class="events-grid" id="experienceGrid"></div>
+            </div>
+
+
         </div>
     </section>
 
-    <!-- SECTION 4: SCHEDULE -->
-    <section id="schedule" class="content-section">
+    <!-- SECTION 6: EVENT COORDINATORS (Replaces Council) -->
+    <section id="coordinators" class="content-section">
         <div class="container">
-            <h2 class="section-title reveal-text">The Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item reveal-left">
-                    <div class="time">09:00 AM</div>
-                    <div class="event-info">
-                        <h3>Grand Opening Ceremony</h3>
-                        <p>Great Hall</p>
-                    </div>
+            <h2 class="section-title reveal-text">Event Coordinators</h2>
+            <div class="coordinators-grid">
+                <div class="coord-card reveal-up">
+                    <div class="coord-icon">🧙‍♂️</div>
+                    <h3>Swapnil Patel</h3>
+                    <p class="coord-phone">+91 9316439664</p>
                 </div>
-                <div class="timeline-item reveal-right">
-                    <div class="time">10:30 AM</div>
-                    <div class="event-info">
-                        <h3>Round 1: The Sorting Hat</h3>
-                        <p>All Venues</p>
-                    </div>
+                <div class="coord-card reveal-up delay-100">
+                    <div class="coord-icon">🧙‍♀️</div>
+                    <h3>Krishnendu Pillai</h3>
+                    <p class="coord-phone">+91 9462514528</p>
                 </div>
-                <div class="timeline-item reveal-left">
-                    <div class="time">02:00 PM</div>
-                    <div class="event-info">
-                        <h3>The Golden Snitch Hunt</h3>
-                        <p>Campus Wide</p>
-                    </div>
+                <div class="coord-card reveal-up delay-200">
+                    <div class="coord-icon">🧙‍♂️</div>
+                    <h3>Mariya Susan</h3>
+                    <p class="coord-phone">9539863614</p>
                 </div>
-                <div class="timeline-item reveal-right">
-                    <div class="time">06:00 PM</div>
-                    <div class="event-info">
-                        <h3>Yule Ball & Cultural Night</h3>
-                        <p>Auditorium</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: SPONSORS -->
-    <section id="sponsors" class="content-section dark-bg">
-        <div class="container">
-            <h2 class="section-title reveal-text">Our Patrons</h2>
-            <div class="sponsors-grid text-center reveal-up">
-                <!-- Simple Logo Placeholders -->
-                <div class="sponsor-placeholder">SPONSOR 1</div>
-                <div class="sponsor-placeholder">SPONSOR 2</div>
-                <div class="sponsor-placeholder">SPONSOR 3</div>
-                <div class="sponsor-placeholder">SPONSOR 4</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: TEAM -->
-    <section id="team" class="content-section">
-        <div class="container">
-            <h2 class="section-title reveal-text">The Council</h2>
-            <div class="team-grid">
-                <div class="team-card reveal-up">
-                    <div class="avatar"></div>
-                    <h3>Albus D.</h3>
-                    <p>Headmaster</p>
-                </div>
-                <div class="team-card reveal-up delay-100">
-                    <div class="avatar"></div>
-                    <h3>Minerva M.</h3>
-                    <p>Event Coordinator</p>
-                </div>
-                <div class="team-card reveal-up delay-200">
-                    <div class="avatar"></div>
-                    <h3>Severus S.</h3>
-                    <p>Logistics Head</p>
+                <div class="coord-card reveal-up delay-300">
+                    <div class="coord-icon">🧙‍♀️</div>
+                    <h3>Priyanshu Joshi</h3>
+                    <p class="coord-phone">7990786744</p>
                 </div>
             </div>
         </div>
@@ -357,13 +278,6 @@
                     <h3>Quest 2026</h3>
                     <p>XIME Kochi</p>
                     <p>Kalamassery, Kerala</p>
-                </div>
-                <div class="footer-col reveal-up">
-                    <h3>Event Coordinators</h3>
-                    <p>Swapnil Patel – +91 9316439664</p>
-                    <p>Krishnendu Pillai – +91 9462514528</p>
-                    <p>Mariya Susan – 9539863614</p>
-                    <p>Priyanshu Joshi – 7990786744</p>
                 </div>
                 <div class="footer-col reveal-right">
                     <h3>Follow the Magic</h3>
@@ -405,6 +319,65 @@
             </filter>
         </defs>
     </svg>
+
+    <!-- Event Details Modal (Moved to Body for Fixed Positioning) -->
+    <div id="eventModal" class="event-modal-overlay" aria-hidden="true">
+        <div class="event-modal-backdrop"></div>
+        <div class="event-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            
+            <div class="modal-header">
+                <div class="modal-icon-wrapper">
+                    <span id="modalIcon" class="modal-icon">🏆</span>
+                </div>
+                <div class="modal-title-group">
+                    <h2 id="modalTitle" class="modal-title">Event Title</h2>
+                    <p id="modalSubtitle" class="modal-subtitle">Club Name</p>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-description-section">
+                    <h4 class="modal-section-header">The Prophecy</h4>
+                    <p id="modalDescription" class="modal-text">Event description goes here...</p>
+                </div>
+
+                <div class="modal-details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Alliance</span>
+                        <span id="modalType" class="detail-value">Individual</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Trials</span>
+                        <span id="modalRounds" class="detail-value">3 Rounds</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Bounty</span>
+                        <span id="modalPrize" class="detail-value">₹ 10000</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wizards</span>
+                        <span id="modalEligibility" class="detail-value">Open to All</span>
+                    </div>
+                </div>
+
+                <div class="modal-register-section">
+                     <button id="modalRegisterBtn" class="btn-primary-gold" style="width: 100%; margin-bottom: 2rem;">Register for Trial</button>
+                </div>
+
+                <div class="modal-contact-section">
+                    <h4 class="modal-section-header">Owl Post (Contact)</h4>
+                    <div id="modalPocs" class="modal-pocs">
+                        <!-- POCs injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer" style="border: none; padding: 0;">
+                <!-- Button moved -->
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/events-data.js"></script>

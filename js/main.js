@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. Background Randomizer ---
     const backgrounds = [
         'assets/hogwarts_bg.png', 
-        'assets/hp_bg_1.png',
+        'assets/library_bg.png',
         'assets/hp_bg_2.png',
         'assets/hp_bg_3.png'
     ];
@@ -182,28 +182,25 @@ document.addEventListener('DOMContentLoaded', () => {
         animateSnitch();
     }
 
-    // --- 7. Dynamic Event Cards & Modal (Categorized) ---
+    // --- 7. Dynamic Event Cards & Modal (Specific Grids) ---
     function initEvents() {
-        const eventsGrid = document.querySelector('#eventsGrid');
+        const mgmtGrid = document.querySelector('#mgmtGrid');
+        const culturalGrid = document.querySelector('#culturalGrid');
+        const sportsGrid = document.querySelector('#sportsGrid');
         const experienceGrid = document.querySelector('#experienceGrid');
         
-        if (!eventsGrid || !experienceGrid || !window.eventsData) {
+        if (!mgmtGrid || !culturalGrid || !sportsGrid || !experienceGrid || !window.eventsData) {
             console.error("Grid elements or Data missing");
             return;
         }
 
-        // Clear existing static content
-        eventsGrid.innerHTML = '';
-        experienceGrid.innerHTML = '';
-
-        // Category Sub-header rendering helper
-        const addCategoryHeader = (container, text) => {
-            const h4 = document.createElement('h4');
-            h4.className = 'sub-category-header reveal-up';
-            h4.innerText = text;
-            container.appendChild(h4);
-            if (typeof observer !== 'undefined') observer.observe(h4);
+        const clearGrids = () => {
+            mgmtGrid.innerHTML = '';
+            culturalGrid.innerHTML = '';
+            sportsGrid.innerHTML = '';
+            experienceGrid.innerHTML = '';
         };
+        clearGrids();
 
         const renderCard = (event, container, index) => {
             const card = document.createElement('div');
@@ -212,13 +209,15 @@ document.addEventListener('DOMContentLoaded', () => {
             card.setAttribute('tabindex', '0');
             card.setAttribute('aria-label', `View details for ${event.title}`);
             
+            const isExperience = event.category === "Experience";
+            
             card.innerHTML = `
                 <div class="card-inner">
                     <div class="card-icon">${event.icon}</div>
                     <h3>${event.title}</h3>
                     <p class="event-subtitle">(${event.subtitle})</p>
                     <p>${event.description.substring(0, 100)}...</p>
-                    <button class="btn-card">Enter Trial</button>
+                    ${isExperience ? '' : '<button class="btn-card">Enter Trial</button>'}
                 </div>
             `;
 
@@ -234,26 +233,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof observer !== 'undefined') observer.observe(card);
         };
 
-        // 1. Group Competition Events
-        const competitionCategories = ["Management", "Cultural", "Sports"];
-        let compIndex = 0;
-        
-        competitionCategories.forEach(cat => {
-            const catEvents = window.eventsData.filter(e => e.category === cat);
-            if (catEvents.length > 0) {
-                addCategoryHeader(eventsGrid, cat.toUpperCase() + " EVENTS");
-                catEvents.forEach(event => {
-                    renderCard(event, eventsGrid, compIndex++);
-                });
-            }
-        });
-
-        // 2. Render Experience Events
-        const experienceEvents = window.eventsData.filter(e => e.category === "Experience");
-        experienceEvents.forEach((event, idx) => {
-            renderCard(event, experienceGrid, idx);
+        // Render by category
+        window.eventsData.forEach((event, idx) => {
+            if (event.category === "Management") renderCard(event, mgmtGrid, idx);
+            else if (event.category === "Cultural") renderCard(event, culturalGrid, idx);
+            else if (event.category === "Sports") renderCard(event, sportsGrid, idx);
+            else if (event.category === "Experience") renderCard(event, experienceGrid, idx);
         });
     }
+
+    // --- 8. Foldable Info Cards Logic ---
+    function initFoldables() {
+        const folds = document.querySelectorAll('.info-fold-card');
+        folds.forEach(fold => {
+            const header = fold.querySelector('.fold-header');
+            header.addEventListener('click', () => {
+                fold.classList.toggle('active');
+            });
+        });
+    }
+    initFoldables();
 
     // Modal Logic
     const strings = {
@@ -299,6 +298,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             pocContainer.appendChild(div);
         });
+
+        // Toggle Register Button for Experience Events
+        const registerSection = modal.querySelector('.modal-register-section');
+        if (registerSection) {
+            registerSection.style.display = (event.category === 'Experience') ? 'none' : 'block';
+        }
 
         // Show Modal
         modal.setAttribute('aria-hidden', 'false');
@@ -441,4 +446,44 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    // --- 9. Typewriter Quote Module ---
+    const initTypewriter = () => {
+        const textElement = document.getElementById('typewriter-text');
+        if (!textElement) return;
+
+        const quotes = [
+            "Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.",
+            "It does not do to dwell on dreams and forget to live.",
+            "After all this time? Always.",
+            "We are only as strong as we are united, as weak as we are divided.",
+            "Wit beyond measure is man’s greatest treasure.",
+            "I solemnly swear that I am up to no good.",
+            "Do not pity the dead, Harry. Pity the living.",
+            "It takes a great deal of bravery to stand up to your enemies, but even more to stand up to your friends."
+        ];
+
+        // Pick one random quote on load
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const currentQuote = quotes[randomIndex];
+        
+        let charIndex = 0;
+        let typeSpeed = 100; // Slower base speed
+
+        function type() {
+            if (charIndex < currentQuote.length) {
+                textElement.textContent += currentQuote.charAt(charIndex);
+                charIndex++;
+                // Slower random variance for natural typing feel
+                const randomSpeed = typeSpeed + Math.random() * 100; 
+                setTimeout(type, randomSpeed);
+            }
+            // Logic ends here; no deleting, no looping.
+        }
+
+        // Start typing
+        type();
+    };
+
+    initTypewriter();
+
 });

@@ -204,7 +204,7 @@ const eventsData = [
     category: "Experience",
     title: "The Great Feast",
     subtitle: "Dining Experience",
-    icon: "🍗",
+    icon: "🥗",
     description: "A magical culinary journey awaiting all participants of Quest 2026.",
     details: {
       type: "Gathering",
