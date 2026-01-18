@@ -449,7 +449,6 @@ ul { list-style: none; }
 .marquee-icon {
     height: 40px;
     width: auto;
-    filter: brightness(0) sepia(1) hue-rotate(-50deg) saturate(5); /* Gold tint */
 }
 
 @keyframes scrollMarquee {
