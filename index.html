@@ -76,16 +76,10 @@
                     </h1>
                 </div>
                 <div class="static-year fade-in-delay">2026</div>
+            <div class="hero-dates fade-in-delay">12th & 13th March</div>
+            <div class="hero-cta-group fade-in-delay-more">
+                <a href="#register" class="btn-primary-gold">Register Now</a>
             </div>
-            <div class="quote-bar-container">
-                <div class="quote-pill">
-                    <span class="quote-label">/mischief:</span>
-                    <span id="randomQuote" class="quote-text">Loading magical prophecy...</span>
-                    <span class="cursor-blink">|</span>
-                </div>
-            </div>
-            
-
         </div>
     </section>
 
@@ -120,8 +114,13 @@
             <h2 class="section-title reveal-text">The Prophecy</h2>
             <div class="about-grid">
                 <div class="about-text reveal-left">
-                    <p><span class="drop-cap">W</span>elcome to Quest 2026, the premier management fest of XIME Kochi. Here, the sharpest minds gather to test their mettle in a series of enchanting challenges designed to push the boundaries of strategy, innovation, and leadership.</p>
-                    <p>Step into a world where corporate acumen meets the arcane arts. Will you master the spells of negotiation, or brew the perfect potion of profitability?</p>
+                    <p>As the light rises within halls of thought and ambition, Quest 2026 brings together curious minds, bold ideas, and endless possibilities. It invites those who dare to think deeper, compete sharper, and imagine bigger- into a space where learning feels alive and every challenge has purpose.</p>
+                    <p>Students from diverse backgrounds come together, each carrying their own stories, strengths, and perspectives. Differences don’t divide here; they blend, sparking curiosity, building connections, and shaping experiences that stay long after the fest ends.</p>
+                    <p>Through challenges that test strategy, teamwork, resilience, and clarity, Quest becomes a stage for competition, collaboration, and celebration. Step forward and take your place- Quest 2026 is more than an event; it’s a journey that leaves you with memories and momentum.</p>
+                    
+                    <div class="about-cta">
+                        <a href="assets/Quest_2026_Brochure.pdf" class="btn-card" download>Download Brochure</a>
+                    </div>
                 </div>
                 <div class="about-visual reveal-right">
                     <!-- Interactive Spell Glyph Codex -->
@@ -143,15 +142,82 @@
         </div>
     </section>
 
+    <!-- STATS SECTION -->
+    <section class="stats-section dark-bg">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal-up">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat-item reveal-up delay-100">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Events</div>
+                </div>
+                <div class="stat-item reveal-up delay-200">
+                    <div class="stat-number">15 Years</div>
+                    <div class="stat-label">of Legacy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAMPIONSHIP TROPHY SECTION -->
+    <section class="championship-section">
+        <div class="container">
+            <h2 class="section-title reveal-text">Overall Championship Trophy</h2>
+            <div class="championship-content reveal-up">
+                <p>As Quest 2026 presents the Overall Championship Trophy, the following criteria will determine the winning college:</p>
+                <ul class="championship-list">
+                    <li>Total footfall representing each college</li>
+                    <li>Positions secured by the college teams across various events</li>
+                    <li>Social media promotions with official XIME Kochi and Quest 2026 tags</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDELINES SECTION -->
+    <section class="guidelines-section dark-bg">
+        <div class="container">
+            <h2 class="section-title reveal-text">General Guidelines</h2>
+            <div class="guidelines-content reveal-up">
+                <ul class="guidelines-list">
+                    <li>All participants must carry their college identity cards for verification.</li>
+                    <li>Discipline and decorum are expected to be maintained throughout the fest.</li>
+                    <li>Participants are reQuested to follow a decent and appropriate dress code.</li>
+                    <li>Mobile phone usage during events is strictly prohibited, unless explicitly permitted by the organizers.</li>
+                    <li>The consumption or possession of alcohol, cigarettes, or any prohibited substances on campus is strictly forbidden.</li>
+                    <li>XIME-issued ID cards must always be worn within the campus premises.</li>
+                    <li>Accommodation support is available at the following rates: <br> Non-A/C Room: Rs. 499 per head per night <br> A/C Room: Rs. 649 per head per night <br> (Both options include 2 days of transportation.)</li>
+                    <li>A team is permitted to participate in only one management event.</li>
+                    <li>Any form of misconduct or violation of rules will result in immediate disqualification.</li>
+                    <li><strong>Early Bird Special:</strong> Register by February 20th to unlock exclusive benefits. Early registrants will enjoy special incentives, including food coupons and exciting goodies.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION 3: EVENTS -->
-    <section id="events" class="content-section dark-bg">
+    <section id="events" class="content-section">
         <div class="container">
             <h2 class="section-title reveal-text">The Trials</h2>
-            <div class="events-grid" id="eventsGrid">
-                <!-- Events will be dynamically injected here by JS -->
+            
+            <div class="competition-wrapper">
+                <h3 class="category-header reveal-up">Competition</h3>
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Categorized events injected here -->
+                </div>
             </div>
 
-            <!-- Event Details Modal (Hidden by default) -->
+            <div class="standalone-events-wrapper">
+                <h3 class="category-header reveal-up">Experiences</h3>
+                <div class="events-grid" id="experienceGrid">
+                    <!-- Standalone events injected here -->
+                </div>
+            </div>
+
+            <!-- Event Details Modal (Remains same) -->
             <div id="eventModal" class="event-modal-overlay" aria-hidden="true">
                 <div class="event-modal-backdrop"></div>
                 <div class="event-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -293,9 +359,11 @@
                     <p>Kalamassery, Kerala</p>
                 </div>
                 <div class="footer-col reveal-up">
-                    <h3>Contact</h3>
-                    <p>Email: owlpost@quest2026.com</p>
-                    <p>Phone: +91 999 999 9999</p>
+                    <h3>Event Coordinators</h3>
+                    <p>Swapnil Patel – +91 9316439664</p>
+                    <p>Krishnendu Pillai – +91 9462514528</p>
+                    <p>Mariya Susan – 9539863614</p>
+                    <p>Priyanshu Joshi – 7990786744</p>
                 </div>
                 <div class="footer-col reveal-right">
                     <h3>Follow the Magic</h3>

@@ -182,19 +182,30 @@ document.addEventListener('DOMContentLoaded', () => {
         animateSnitch();
     }
 
-    // --- 7. Dynamic Event Cards & Modal (New) ---
+    // --- 7. Dynamic Event Cards & Modal (Categorized) ---
     function initEvents() {
         const eventsGrid = document.querySelector('#eventsGrid');
-        // Check global eventsData
-        if (!eventsGrid || !window.eventsData) {
-            console.error("Events Grid or Data/Events missing", eventsGrid, window.eventsData);
+        const experienceGrid = document.querySelector('#experienceGrid');
+        
+        if (!eventsGrid || !experienceGrid || !window.eventsData) {
+            console.error("Grid elements or Data missing");
             return;
         }
 
         // Clear existing static content
         eventsGrid.innerHTML = '';
+        experienceGrid.innerHTML = '';
 
-        window.eventsData.forEach((event, index) => {
+        // Category Sub-header rendering helper
+        const addCategoryHeader = (container, text) => {
+            const h4 = document.createElement('h4');
+            h4.className = 'sub-category-header reveal-up';
+            h4.innerText = text;
+            container.appendChild(h4);
+            if (typeof observer !== 'undefined') observer.observe(h4);
+        };
+
+        const renderCard = (event, container, index) => {
             const card = document.createElement('div');
             card.className = `event-card reveal-up delay-${(index % 4) * 100}`;
             card.setAttribute('role', 'button');
@@ -211,10 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
-            // Click Listener
             card.addEventListener('click', () => openEventModal(event));
-            
-            // Keyboard Enter/Space Listener
             card.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -222,15 +230,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            eventsGrid.appendChild(card);
-            
-            // Register with Intersection Observer (defined in scope)
-            if (typeof observer !== 'undefined') {
-                observer.observe(card);
-            } else {
-                // Fallback if observer invalid: just show it
-                card.classList.add('visible');
+            container.appendChild(card);
+            if (typeof observer !== 'undefined') observer.observe(card);
+        };
+
+        // 1. Group Competition Events
+        const competitionCategories = ["Management", "Cultural", "Sports"];
+        let compIndex = 0;
+        
+        competitionCategories.forEach(cat => {
+            const catEvents = window.eventsData.filter(e => e.category === cat);
+            if (catEvents.length > 0) {
+                addCategoryHeader(eventsGrid, cat.toUpperCase() + " EVENTS");
+                catEvents.forEach(event => {
+                    renderCard(event, eventsGrid, compIndex++);
+                });
             }
+        });
+
+        // 2. Render Experience Events
+        const experienceEvents = window.eventsData.filter(e => e.category === "Experience");
+        experienceEvents.forEach((event, idx) => {
+            renderCard(event, experienceGrid, idx);
         });
     }
 
