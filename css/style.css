@@ -112,6 +112,14 @@ ul { list-style: none; }
 .desktop-only { display: flex; }
 .mobile-only { display: none; }
 
+.hamburger { display: none; }
+.mobile-menu { display: none; }
+
+.mobile-nav-item {
+    text-decoration: none;
+    color: inherit;
+}
+
 @media (max-width: 992px) {
     .desktop-only { display: none !important; }
     .mobile-only { display: flex !important; }
