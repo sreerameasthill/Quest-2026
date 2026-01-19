@@ -1570,8 +1570,10 @@ body.menu-open {
 
 .info-fold-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr; /* Stacked vertically to prevent cropping */
+    gap: 2rem;
+    max-width: 800px; /* Limit width for aesthetics */
+    margin: 0 auto;
 }
 
 .info-fold-card {
@@ -1580,11 +1582,10 @@ body.menu-open {
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    height: 70px; /* Header height approx */
+    height: auto; /* Allow header to define height */
 }
 
 .info-fold-card.active {
-    height: auto;
     background: rgba(20, 10, 10, 0.8);
     border-color: var(--color-gold);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -1611,12 +1612,15 @@ body.menu-open {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    line-height: 1.4; /* Better functionality for wrapped text */
 }
 
 .fold-icon {
     font-size: 0.8rem;
     color: var(--color-gold);
     transition: transform 0.3s ease;
+    flex-shrink: 0; /* Prevent icon from squishing */
+    margin-left: 1rem;
 }
 
 .info-fold-card.active .fold-icon {
@@ -1624,16 +1628,17 @@ body.menu-open {
 }
 
 .fold-content {
-    padding: 2rem;
     opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    transition: all 0.5s ease;
 }
 
 .info-fold-card.active .fold-content {
     opacity: 1;
-    transform: translateY(0);
+    max-height: 1000px; /* Arbitrary large height for expansion */
+    padding: 2rem;
     pointer-events: auto;
 }
 
@@ -1746,4 +1751,35 @@ body.menu-open {
     .championship-content, .guidelines-content {
         padding: 2rem 1.5rem;
     }
+    .championship-content, .guidelines-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Scroll Arrows */
+.scroll-arrow {
+    position: absolute;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--color-gold);
+    animation: moveLeftRight 1.5s infinite alternate;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    opacity: 0.8;
+}
+
+/* Coordinators section specific adjustment */
+#coordinators .container {
+    position: relative;
+}
+.coord-arrow {
+    top: 60%; /* Adjust for header height */
+}
+
+@keyframes moveLeftRight {
+    0% { transform: translateY(-50%) translateX(0); }
+    100% { transform: translateY(-50%) translateX(5px); }
 }
