@@ -133,7 +133,7 @@ const eventsData = [
     title: "CROWN AND CLOAK",
     subtitle: "Mr. Quest & Miss. Quest",
     icon: "👑",
-    description: "Grace meets confidence under the spotlight at Crown and Cloak. This is not just about appearance—it’s about personality, presence, and the story you carry. Participants step forward to embody charm, intellect, and leadership, wearing confidence like a cloak and ambition like a crown.\n\nGUIDELINES:\n• Open to individual participants competing for Mr. Quest & Miss. Quest\n• Participants are expected to showcase confidence, personality, presence, and originality\n• The event celebrates style, expression, intellect, and composure\n• Elegant and theme-aligned attire is required\n• Props permitted if they enhance presentation\n• No vulgarity or offensive gestures\n• Judges’ decisions are final\n\nREGISTRATION FEE: 149/-",
+    description: "Grace meets confidence under the spotlight at Crown and Cloak. This is not just about appearance—it’s about personality, presence, and the story you carry. Participants step forward to embody charm, intellect, and leadership, wearing confidence like a cloak and ambition like a crown.\n\nGUIDELINES:\n• Open to individual participants competing for Mr. Quest & Miss. Quest\n• Participants are expected to showcase confidence, personality, presence, and originality\n• The event celebrates style, expression, intellect, and composure\n• Elegant and theme-aligned attire is required\n• Props permitted if they enhance presentation\n• No vulgarity or offensive gestures\n• Judges’ decisions are final\n\nREGISTRATION FEE: 149/-\n\nPRIZE MONEY: ₹5,000/- (Each Mr. Quest & Miss. Quest)",
     details: {
       type: "Individual",
       rounds: "Pageant Style",
@@ -145,6 +145,24 @@ const eventsData = [
        { name: "Anshika", number: "+91 70447 99322" }
     ]
   },
+  {
+    id: "missing-piece",
+    category: "Cultural",
+    title: "Missing Piece",
+    subtitle: "Treasure Hunt",
+    icon: "🧩",
+    description: "Unleash your inner wizard at XIME Kochi's Management Fest with Horcrux Hunt—a thrilling 90–120-minute, adventure blending Harry Potter magic. Teams sorted into team’s race for the ultimate House Cup, without spoilers on the dark secrets ahead.\n\nEVENT FORMAT:\nAll challenges revealed at kickoff for clever planning—no prior leaks, just pure wizarding suspense. Compete in two seamless parts across campus, earning points for cunning, teamwork, and flair.\n\nGUIDELINES:\n• Participants can enter as a team of 4\n• Duration is 90 to 120 minutes\n• Violation of rules or submission of inappropriate content will result in immediate disqualification\n• Safety: No unsafe poses, indoor running, or restricted areas\n• Points accumulate; top teams win trophy\n\nREGISTRATION FEES: Rs. 149/- Per Team",
+    details: {
+      type: "Team (4)",
+      rounds: "90-120 Mins",
+      prize: "1st: ₹4.5k, 2nd: ₹2.5k",
+      eligibility: "Student Teams"
+    },
+    pocs: [
+      { name: "Priyadarshini", number: "+91 83359 61168" },
+      { name: "Saumya Rai", number: "+91 99580 93428" }
+    ]
+  },
 
   // --- SPORTS EVENTS ---
   {
@@ -153,7 +171,7 @@ const eventsData = [
     title: "The Golden Snitch-off",
     subtitle: "Football",
     icon: "⚽",
-    description: "Welcome to The Golden Snitch-off, where passion, teamwork, and competitive spirit come together on the field. Inspired by the magical world, this football tournament invites teams to showcase skill, strategy, and sportsmanship in an electrifying knockout format.\n\nGUIDELINES:\n• Team Composition: 7 players (4 main + 3 substitutes)\n• Format: Knockout tournament\n• Rules: Standard football rules\n• Referee’s decision is final\n• Any misconduct leads to disqualification\n\nREGISTRATION FEE: Rs. 149/- per player",
+    description: "Welcome to The Golden Snitch-off, where passion, teamwork, and competitive spirit come together on the field. Inspired by the magical world, this football tournament invites teams to showcase skill, strategy, and sportsmanship in an electrifying knockout format.\n\nGUIDELINES:\n• Team Composition: 7 players (5 main + 2 substitutes)\n• Players must wear turf friendly shoes (no studs)\n• Format: Knockout tournament\n• Rules: Standard football rules\n• Referee’s decision is final\n• Any misconduct leads to disqualification\n\nREGISTRATION FEE: Rs. 149/- per player",
     details: {
       type: "Team (7)",
       rounds: "Knockout",

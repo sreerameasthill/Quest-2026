@@ -62,14 +62,14 @@ ul { list-style: none; }
     z-index: 1000;
     padding: 0.8rem 0; /* Reduced padding */
     transition: all 0.4s ease;
-    background: rgba(18, 18, 18, 0.95); /* Deep charcoal theme */
+    background: rgba(0, 0, 0, 0.95); /* Pure black theme */
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid rgba(212, 175, 55, 0.1); /* Subtle gold border */
 }
 
 .navbar.scrolled {
-    background: rgba(18, 18, 18, 0.98);
+    background: #000000; /* Pure black on scroll */
     padding: 0.6rem 0; /* Further reduced on scroll */
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     backdrop-filter: blur(15px);
@@ -106,8 +106,7 @@ ul { list-style: none; }
 
 .nav-logo.quest {
     height: 48px; /* Reduced by ~30% from 66px */
-    /* Pure white glow */
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    filter: none; /* No glow for new intricate logo */
 }
 
 .v-divider {
@@ -1640,8 +1639,203 @@ body.menu-open {
 
 .info-fold-card.active .fold-content {
     opacity: 1;
-    max-height: 1000px; /* Arbitrary large height for expansion */
-    padding: 2rem;
+    max-height: 2000px; /* Increased to ensure fits */
+    padding: 2rem 2rem 4rem 2rem; /* Added extra bottom padding */
+    pointer-events: auto;
+}
+
+/* Coordinators Section Styles */
+/* Coordinators Section Styles */
+.coordinators-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem; /* Space for scrollbar */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) transparent;
+}
+
+.coordinators-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.coordinators-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.coordinators-grid::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 3px;
+}
+
+.coord-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    min-width: 280px; /* Fixed width for carousel items */
+    scroll-snap-align: center;
+}
+
+.coord-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.coord-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.coord-card h3 {
+    font-family: var(--font-subheading);
+    font-size: 1.3rem;
+    color: var(--color-parchment);
+    margin-bottom: 0.5rem;
+}
+
+.coord-phone {
+    font-family: 'Courier New', monospace;
+    color: var(--color-gold);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Category Header Enhancements */
+.category-row {
+    position: relative;
+    width: 100%;
+}
+
+.category-header {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--color-gold);
+    margin: 4rem 0 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.category-header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--color-gold);
+    margin: 10px auto 0;
+    box-shadow: 0 0 10px var(--color-gold);
+}
+
+.sub-category-header {
+    display: none; /* Removed as we now have row headers */
+}
+
+.competition-wrapper, .standalone-events-wrapper {
+    margin-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .category-header {
+        font-size: 2.5rem;
+    }
+    .championship-content, .guidelines-content {
+        padding: 2rem 1.5rem;
+    }
+    .championship-content, .guidelines-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Scroll Arrows */
+.scroll-arrow {
+    position: absolute;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--color-gold);
+    animation: moveLeftRight 1.5s infinite alternate;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    opacity: 0.8;
+}
+
+/* Coordinators section specific adjustment */
+#coordinators .container {
+    position: relative;
+}
+.coord-arrow {
+    top: 60%; /* Adjust for header height */
+}
+}
+
+.info-fold-card.active {
+    background: rgba(20, 10, 10, 0.8);
+    border-color: var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.fold-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(212, 175, 55, 0.05);
+    transition: background 0.3s;
+}
+
+.fold-header:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.fold-header h3 {
+    font-family: var(--font-subheading);
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.4; /* Better functionality for wrapped text */
+}
+
+.fold-icon {
+    font-size: 0.8rem;
+    color: var(--color-gold);
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Prevent icon from squishing */
+    margin-left: 1rem;
+}
+
+.info-fold-card.active .fold-icon {
+    transform: rotate(180deg);
+}
+
+.fold-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    transition: all 0.5s ease;
+}
+
+.info-fold-card.active .fold-content {
+    opacity: 1;
+    max-height: 2000px; /* Increased to ensure fits */
+    padding: 2rem 2rem 4rem 2rem; /* Added extra bottom padding */
     pointer-events: auto;
 }
 
@@ -1785,4 +1979,89 @@ body.menu-open {
 @keyframes moveLeftRight {
     0% { transform: translateY(-50%) translateX(0); }
     100% { transform: translateY(-50%) translateX(5px); }
+}
+/* --- SPONSORS MARQUEE --- */
+.sponsors-section {
+    padding: 3rem 0;
+    overflow: hidden;
+    background: transparent;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    background: rgba(0, 0, 0, 0.3); /* Subtle band background */
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 0;
+    /* Mask to fade edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 4rem; /* Spacing between logos */
+    width: max-content;
+    animation: scroll 40s linear infinite; /* Smooth continuous scroll */
+    will-change: transform;
+}
+
+/* Pause animation on hover */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.sponsor-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Circular Frame */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95); /* White bg to make logos pop */
+    border: 3px solid var(--color-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Padding inside the circle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+    z-index: 10;
+}
+
+.sponsor-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transform: scale(1.5); /* 50% zoomed in */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves exactly half (the original set) */
+    }
+}
+
+/* Tablet/Mobile Adjustments */
+@media (max-width: 768px) {
+    .marquee-track {
+        gap: 2rem;
+        animation: scroll 25s linear infinite;
+    }
+    
+    .sponsor-logo {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
 }

@@ -33,7 +33,7 @@
             <div class="brand">
                 <img src="assets/xime_marquee_logo.png" alt="XIME" class="nav-logo xime">
                 <div class="v-divider"></div>
-                <img src="assets/quest_logo.png" alt="Quest" class="nav-logo quest">
+                <img src="assets/quest_logo_new.jpg" alt="Quest" class="nav-logo quest">
             </div>
             
             <div class="nav-links desktop-only">
@@ -53,10 +53,9 @@
         <!-- Mobile Menu Dropdown -->
         <div class="mobile-menu mobile-only" id="mobileMenu">
             <a href="#about" class="mobile-nav-item">The Quest</a>
-            <a href="#events" class="mobile-nav-item">Events</a>
-            <a href="#schedule" class="mobile-nav-item">Timeline</a>
-            <a href="#team" class="mobile-nav-item">Wizards</a>
-            <a href="#contact" class="mobile-nav-item">Owl Post</a>
+            <a href="#events" class="mobile-nav-item" onclick="toggleMenu()">Events</a>
+            <a href="#about" class="mobile-nav-item" onclick="toggleMenu()">About</a>
+            <a href="#contact" class="mobile-nav-item" onclick="toggleMenu()">Contact</a>
         </div>
     </nav>
 
@@ -245,6 +244,56 @@
         </div>
     </section>
 
+    <!-- SECTION: SPONSORS MARQUEE -->
+    <section class="sponsors-section">
+        <div class="container">
+            <h2 class="section-title reveal-text">Grateful to our past sponsors</h2>
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <!-- Original Set -->
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_115347_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_115642_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_115753_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_121630_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_121744_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_121955_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122148_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122301_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122503_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122903_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_115033_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_115519_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_122622_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_122738_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_123147_0000.png" alt="Sponsor"></div>
+                    
+                    <!-- Duplicate Set for Seamless Scroll -->
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_115347_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_115642_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_115753_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_121630_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_121744_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_121955_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122148_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122301_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122503_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/20260119_122903_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_115033_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_115519_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_122622_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_122738_0000.png" alt="Sponsor"></div>
+                    <div class="sponsor-logo"><img src="assets/sponsors/Untitled design_20260119_123147_0000.png" alt="Sponsor"></div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://drive.google.com/file/d/1gEkH4IjNV1nifmGxC2kpCCsp3-zsS-yf/view?usp=drivesdk" target="_blank" class="btn-primary-gold" style="display: inline-block; text-decoration: none; padding: 12px 24px;">
+                    Download Sponsorship Brochure 📜
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION 6: EVENT COORDINATORS (Replaces Council) -->
     <section id="coordinators" class="content-section">
         <div class="container">
@@ -287,9 +336,8 @@
                 <div class="footer-col reveal-right">
                     <h3>Follow the Magic</h3>
                     <div class="social-links">
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter</a>
+                        <a href="https://www.instagram.com/quest.2026/" target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/company/xime-kochi/" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -370,7 +418,7 @@
                      <button id="modalRegisterBtn" class="btn-primary-gold" style="width: 100%; margin-bottom: 2rem;">Register for Trial</button>
                 </div>
 
-                <div class="modal-contact-section">
+                <div class="modal-contact-section" id="modalContactSection">
                     <h4 class="modal-section-header">Owl Post (Contact)</h4>
                     <div id="modalPocs" class="modal-pocs">
                         <!-- POCs injected here -->

@@ -284,20 +284,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById(strings.eligibleId).innerText = event.details.eligibility;
 
         // POCs
-        const pocContainer = document.getElementById(strings.pocsId);
-        pocContainer.innerHTML = '';
-        event.pocs.forEach(poc => {
-            const div = document.createElement('div');
-            div.className = 'poc-item';
-            div.innerHTML = `
-                <span class="poc-icon">🧙‍♂️</span>
-                <div>
-                    <div class="poc-name">${poc.name}</div>
-                    ${poc.number ? `<div class="poc-number">${poc.number}</div>` : ''}
-                </div>
-            `;
-            pocContainer.appendChild(div);
-        });
+        // Toggle Owl Post (Contact) visibility
+        const owlPostSection = document.getElementById('modalContactSection');
+        const pocContainer = document.getElementById(strings.pocsId); // Assuming strings.pocsId refers to modalContactList or similar
+        
+        if (event.category === 'Experience') {
+            if (owlPostSection) owlPostSection.style.display = 'none';
+            if (pocContainer) pocContainer.innerHTML = ''; // Clear any existing POCs
+        } else {
+            if (owlPostSection) owlPostSection.style.display = 'block';
+            if (pocContainer) {
+                pocContainer.innerHTML = '';
+                event.pocs.forEach(poc => {
+                    const div = document.createElement('div');
+                    div.className = 'poc-item';
+                    div.innerHTML = `
+                        <span class="poc-icon">🧙‍♂️</span>
+                        <div>
+                            <div class="poc-name">${poc.name}</div>
+                            ${poc.number ? `<div class="poc-number"><a href="tel:${poc.number}">${poc.number}</a></div>` : ''}
+                        </div>
+                    `;
+                    pocContainer.appendChild(div);
+                });
+            }
+        }
 
         // Toggle Register Button for Experience Events
         const registerSection = modal.querySelector('.modal-register-section');
