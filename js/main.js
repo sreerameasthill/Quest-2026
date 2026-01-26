@@ -312,8 +312,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle Register Button for Experience Events
         const registerSection = modal.querySelector('.modal-register-section');
+        const registerBtn = document.getElementById('modalRegisterBtn');
+
         if (registerSection) {
-            registerSection.style.display = (event.category === 'Experience') ? 'none' : 'block';
+            if (event.category === 'Experience') {
+                registerSection.style.display = 'none';
+            } else {
+                registerSection.style.display = 'block';
+                if (registerBtn) {
+                    registerBtn.href = event.registrationLink || '#';
+                }
+            }
         }
 
         // Show Modal

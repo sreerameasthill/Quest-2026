@@ -16,7 +16,8 @@ const eventsData = [
     pocs: [
       { name: "Ashlin Antony N S", number: "92070 76549" },
       { name: "Naaj Jewad", number: "9633596227" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/thegoblet-of-champions-best-manager"
   },
   {
     id: "founders-spellbook",
@@ -34,7 +35,8 @@ const eventsData = [
     pocs: [
       { name: "Dennis", number: "+91 98191 87317" },
       { name: "Sebin", number: "+91 99612 91782" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/founder-sspellbook-b-plan"
   },
   {
     id: "wall-street-wizards",
@@ -52,7 +54,8 @@ const eventsData = [
     pocs: [
       { name: "Vishwa Meyyappan M", number: "+91 7397 555 395" },
       { name: "Anshika Agarwal", number: "+91 70447 99322" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/the-wizardsof-wall-street-finance"
   },
   {
     id: "triwizard-marketing",
@@ -69,7 +72,8 @@ const eventsData = [
     },
     pocs: [
       { name: "Eakashya", number: "8637652018" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/the-triwizard-marketing-tournament-marketing"
   },
   {
     id: "phoenix-reign-ops",
@@ -87,7 +91,8 @@ const eventsData = [
     pocs: [
       { name: "Yogitha", number: "+91 77801 64501" },
       { name: "Abijith KA", number: "+91 96331 35569" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/phoenixreign-spell-ops-operations"
   },
   {
     id: "leadership-quest-hr",
@@ -105,7 +110,8 @@ const eventsData = [
     pocs: [
       { name: "Sreenath Anand", number: "9567536448" },
       { name: "Varsha Ann", number: "7902296574" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/order-of-the-phoenix-the-leadership-quest-hr"
   },
 
   // --- CULTURAL & CREATIVE EVENTS ---
@@ -125,7 +131,8 @@ const eventsData = [
     pocs: [
        { name: "Shalini", number: "+91 90947 96652" },
        { name: "Joel", number: "+91 70121 68621" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/thechamber-of-talents-performance-event"
   },
   {
     id: "crown-cloak",
@@ -143,7 +150,8 @@ const eventsData = [
     pocs: [
        { name: "Ananthu Menon", number: "+91 82818 10997" },
        { name: "Anshika", number: "+91 70447 99322" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/crown-and-cloak-mr-quest-and-miss-quest"
   },
   {
     id: "missing-piece",
@@ -151,7 +159,7 @@ const eventsData = [
     title: "Missing Piece",
     subtitle: "Treasure Hunt",
     icon: "🧩",
-    description: "Unleash your inner wizard at XIME Kochi's Management Fest with Horcrux Hunt—a thrilling 90–120-minute, adventure blending Harry Potter magic. Teams sorted into team’s race for the ultimate House Cup, without spoilers on the dark secrets ahead.\n\nEVENT FORMAT:\nAll challenges revealed at kickoff for clever planning—no prior leaks, just pure wizarding suspense. Compete in two seamless parts across campus, earning points for cunning, teamwork, and flair.\n\nGUIDELINES:\n• Participants can enter as a team of 4\n• Duration is 90 to 120 minutes\n• Violation of rules or submission of inappropriate content will result in immediate disqualification\n• Safety: No unsafe poses, indoor running, or restricted areas\n• Points accumulate; top teams win trophy\n\nREGISTRATION FEES: Rs. 149/- Per Team",
+    description: "Unleash your inner wizard at XIME Kochi's Management Fest with Horcrux Hunt—a thrilling 90–120-minute, adventure blending Harry Potter magic. Teams sorted into team’s race for the ultimate House Cup, without spoilers on the dark secrets ahead.\n\nEVENT FORMAT:\nAll challenges revealed at kickoff for clever planning—no prior leaks, just pure wizarding suspense. Compete in two seamless parts across campus, earning points for cunning, teamwork, and flair.\n\nGUIDELINES:\n• Participants can enter as a team of 4\n• Duration is 90 to 120 minutes\n• Violation of rules or submission of inappropriate content will result in immediate disqualification\n• Safety: No unsafe poses, indoor running, or restricted areas\n• Points accumulate; top teams win trophy\n\nREGISTRATION FEES: Rs. 149/- Per Head",
     details: {
       type: "Team (4)",
       rounds: "90-120 Mins",
@@ -161,7 +169,8 @@ const eventsData = [
     pocs: [
       { name: "Priyadarshini", number: "+91 83359 61168" },
       { name: "Saumya Rai", number: "+91 99580 93428" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/missing-piecetreasure-hunt"
   },
 
   // --- SPORTS EVENTS ---
@@ -181,7 +190,8 @@ const eventsData = [
     pocs: [
       { name: "Harihar", number: "9994984179" },
       { name: "Amrith", number: "9790215616" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/the-goldensnitch-off-football"
   },
   {
     id: "hoops-hallows",
@@ -189,9 +199,9 @@ const eventsData = [
     title: "HOOPS & HALLOWS: THE WIZARD’S COURT",
     subtitle: "Basketball",
     icon: "🏀",
-    description: "Step onto the pitch for an enchanting basketball experience where magic meets the hardwood. Whether you’re a Gryffindor at heart or possess Slytherin ambition, teams must use their best 'spells' and strategies to outmaneuver their rivals. Only one team will claim eternal glory!\n\nGUIDELINES:\n• Each team must consist of 7 to 9 players\n• Format: Knockout Tournament\n• Rules: FIBA Rules\n• Referee’s decision is final\n• Unsportsmanlike behavior = Disqualification\n\nREGISTRATION FEE: Rs. 149/- Per Head",
+    description: "Step onto the pitch for an enchanting basketball experience where magic meets the hardwood. Whether you’re a Gryffindor at heart or possess Slytherin ambition, teams must use their best 'spells' and strategies to outmaneuver their rivals. Only one team will claim eternal glory!\n\nGUIDELINES:\n• Team Composition: 7 players (5 main + 2 substitutes)\n• Format: Knockout Tournament\n• Rules: FIBA Rules\n• Referee’s decision is final\n• Unsportsmanlike behavior = Disqualification\n\nREGISTRATION FEE: Rs. 149/- Per Head",
     details: {
-      type: "Team (7-9)",
+      type: "Team (7)",
       rounds: "Knockout",
       prize: "1st: ₹6k, 2nd: ₹3k",
       eligibility: "Basketball Teams"
@@ -199,7 +209,8 @@ const eventsData = [
     pocs: [
       { name: "Aaddhar Dash", number: "9482052669" },
       { name: "Sudeep H M", number: "7338242980" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/hoops-and-hallows-the-wizards-court-basketball"
   },
   {
     id: "shuttles-spells",
@@ -211,13 +222,14 @@ const eventsData = [
     details: {
       type: "Singles / Doubles",
       rounds: "Knockout",
-      prize: "1st: ₹3k, 2nd: ₹2k",
+      prize: "Boys: 1st ₹1k, 2nd ₹500 | Girls: 1st ₹1k, 2nd ₹500 | Mixed: 1st ₹3k, 2nd ₹2k",
       eligibility: "Badminton Players"
     },
     pocs: [
       { name: "Shakket", number: "6374914054" },
       { name: "Piyush", number: "9468147447" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/shuttles-and-spells-the-wizards-badminton-cup"
   },
   {
     id: "wizards-crease",
@@ -235,7 +247,8 @@ const eventsData = [
     pocs: [
       { name: "Akash Pandey", number: "7224939239" },
       { name: "Raman Pandey", number: "6299676954" }
-    ]
+    ],
+    registrationLink: "https://makemypass.com/event/the-wizards-crease-a-turf-cricket-tournament"
   },
 
   // --- EXPERIENCE / STANDALONE ---
