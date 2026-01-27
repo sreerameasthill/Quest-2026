@@ -104,7 +104,7 @@ const eventsData = [
     details: {
       type: "Team (4)",
       rounds: "3 Rounds (2 Days)",
-      prize: "1st: ₹11k, 2nd: ₹6.5k",
+      prize: "1st: ₹12k, 2nd: ₹6k",
       eligibility: "HR Enthusiasts"
     },
     pocs: [
