@@ -17,7 +17,7 @@ const eventsData = [
       { name: "Ashlin Antony N S", number: "92070 76549" },
       { name: "Naaj Jewad", number: "9633596227" }
     ],
-    registrationLink: "https://makemypass.com/event/thegoblet-of-champions-best-manager"
+    registrationLink: "https://app.makemypass.com/event/the-goblet-of-champions-best-manager"
   },
   {
     id: "founders-spellbook",
@@ -36,7 +36,7 @@ const eventsData = [
       { name: "Dennis", number: "+91 98191 87317" },
       { name: "Sebin", number: "+91 99612 91782" }
     ],
-    registrationLink: "https://makemypass.com/event/founder-sspellbook-b-plan"
+    registrationLink: "https://app.makemypass.com/event/founder-s-spellbook-b-plan"
   },
   {
     id: "wall-street-wizards",
@@ -55,7 +55,7 @@ const eventsData = [
       { name: "Vishwa Meyyappan M", number: "+91 7397 555 395" },
       { name: "Anshika Agarwal", number: "+91 70447 99322" }
     ],
-    registrationLink: "https://makemypass.com/event/the-wizardsof-wall-street-finance"
+    registrationLink: "https://app.makemypass.com/event/the-wizards-of-wall-street-finance"
   },
   {
     id: "triwizard-marketing",
@@ -92,7 +92,7 @@ const eventsData = [
       { name: "Yogitha", number: "+91 77801 64501" },
       { name: "Abijith KA", number: "+91 96331 35569" }
     ],
-    registrationLink: "https://makemypass.com/event/phoenixreign-spell-ops-operations"
+    registrationLink: "https://app.makemypass.com/event/phoenix-reign-spell-ops-operations"
   },
   {
     id: "leadership-quest-hr",
@@ -132,7 +132,7 @@ const eventsData = [
        { name: "Shalini", number: "+91 90947 96652" },
        { name: "Joel", number: "+91 70121 68621" }
     ],
-    registrationLink: "https://makemypass.com/event/thechamber-of-talents-performance-event"
+    registrationLink: "https://app.makemypass.com/event/the-chamber-of-talents-performance-event"
   },
   {
     id: "crown-cloak",
@@ -170,7 +170,7 @@ const eventsData = [
       { name: "Priyadarshini", number: "+91 83359 61168" },
       { name: "Saumya Rai", number: "+91 99580 93428" }
     ],
-    registrationLink: "https://makemypass.com/event/missing-piecetreasure-hunt"
+    registrationLink: "https://app.makemypass.com/event/missing-piece-treasure-hunt"
   },
 
   // --- SPORTS EVENTS ---
@@ -191,7 +191,7 @@ const eventsData = [
       { name: "Harihar", number: "9994984179" },
       { name: "Amrith", number: "9790215616" }
     ],
-    registrationLink: "https://makemypass.com/event/the-goldensnitch-off-football"
+    registrationLink: "https://app.makemypass.com/event/the-golden-snitch-off-football"
   },
   {
     id: "hoops-hallows",
