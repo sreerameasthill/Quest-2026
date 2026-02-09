@@ -25,9 +25,9 @@ const eventsData = [
     title: "Founder’s Spellbook",
     subtitle: "B-Plan Competition",
     icon: "📜",
-    description: "Founder’s Spellbook is a Hogwarts-inspired Business Plan competition designed to test participants on strategy creation, real-time execution, and pitching skills. Set in the magical world of Hogwarts, teams progress through enchanted rounds that mirror real-world entrepreneurial challenges. The event follows a cumulative evaluation system, rewarding consistency, adaptability, and innovation.\n\nGUIDELINES:\n• Teams must consist of 2-3 participants from the same institution\n• Participants must bring their laptops (one per team)\n• Teams should come prepared with their pitch and submit it beforehand\n• Judges' decisions will be final and cannot be contested\n• Qualifying teams must plan for an overnight stay as the competition spans two days\n• Scores and rankings will not be disclosed until the final results\n• Business Formals are mandatory; Adherence to time limit is encouraged\n\nREGISTRATION FEE: Rs 249/- Per Head",
+    description: "Founder’s Spellbook is a Hogwarts-inspired Business Plan competition designed to test participants on strategy creation, real-time execution, and pitching skills. Set in the magical world of Hogwarts, teams progress through enchanted rounds that mirror real-world entrepreneurial challenges. The event follows a cumulative evaluation system, rewarding consistency, adaptability, and innovation.\n\nGUIDELINES:\n• Teams must consist of 3 participants from the same institution\n• Participants must bring their laptops (one per team)\n• Teams should come prepared with their pitch and submit it beforehand\n• Judges' decisions will be final and cannot be contested\n• Qualifying teams must plan for an overnight stay as the competition spans two days\n• Scores and rankings will not be disclosed until the final results\n• Business Formals are mandatory; Adherence to time limit is encouraged\n\nREGISTRATION FEE: Rs 249/- Per Head",
     details: {
-      type: "Team (2-3)",
+      type: "Team (3)",
       rounds: "2 Days",
       prize: "1st: ₹20k, 2nd: ₹10k",
       eligibility: "Student Teams"
