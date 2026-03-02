@@ -159,10 +159,10 @@ const eventsData = [
     title: "Missing Piece",
     subtitle: "Treasure Hunt",
     icon: "🧩",
-    description: "Unleash your inner wizard at XIME Kochi's Management Fest with Horcrux Hunt—a thrilling 90–120-minute, adventure blending Harry Potter magic. Teams sorted into team’s race for the ultimate House Cup, without spoilers on the dark secrets ahead.\n\nEVENT FORMAT:\nAll challenges revealed at kickoff for clever planning—no prior leaks, just pure wizarding suspense. Compete in two seamless parts across campus, earning points for cunning, teamwork, and flair.\n\nGUIDELINES:\n• Participants can enter as a team of 4\n• Duration is 90 to 120 minutes\n• Violation of rules or submission of inappropriate content will result in immediate disqualification\n• Safety: No unsafe poses, indoor running, or restricted areas\n• Points accumulate; top teams win trophy\n\nREGISTRATION FEES: Rs. 149/- Per Head",
+    description: "Unleash your inner wizard at XIME Kochi's Management Fest with Horcrux Hunt—a thrilling 2-day adventure blending Harry Potter magic. Teams sorted into team’s race for the ultimate House Cup, without spoilers on the dark secrets ahead.\n\nEVENT FORMAT:\nAll challenges revealed at kickoff for clever planning—no prior leaks, just pure wizarding suspense. Compete in two seamless parts across campus, earning points for cunning, teamwork, and flair.\n\nGUIDELINES:\n• Participants can enter as a team of 4\n• Duration: 2 Days\n• Violation of rules or submission of inappropriate content will result in immediate disqualification\n• Safety: No unsafe poses, indoor running, or restricted areas\n• Points accumulate; top teams win trophy\n\nREGISTRATION FEES: Rs. 149/- Per Head",
     details: {
       type: "Team (4)",
-      rounds: "90-120 Mins",
+      rounds: "2 Days",
       prize: "1st: ₹4.5k, 2nd: ₹2.5k",
       eligibility: "Student Teams"
     },
@@ -237,7 +237,7 @@ const eventsData = [
     title: "The Wizard’s Crease",
     subtitle: "Turf Cricket",
     icon: "🏏",
-    description: "This outdoor turf cricket tournament is designed to promote sportsmanship, teamwork, and competitive spirit. The event welcomes teams to compete in an energetic turf setting, offering players a platform to showcase their cricketing skills and strategic gameplay.\n\nGUIDELINES:\n• Format: 5-over per side, 7 players per team\n• Structure: League-cum-Knockout\n• League Stage: Min 3 matches per team\n• Qualifiers: Win at least 2/3 league matches for Semi-Finals\n• Referee decisions are final\n\nREGISTRATION FEE: Rs. 129/- per Head",
+    description: "This outdoor turf cricket tournament is designed to promote sportsmanship, teamwork, and competitive spirit. The event welcomes teams to compete in an energetic turf setting, offering players a platform to showcase their cricketing skills and strategic gameplay.\n\nGUIDELINES:\n• Format: 5-over per side, 7 players per team\n• Structure: League-cum-Knockout\n• League Stage: Min 3 matches per team\n• Qualifiers: Win at least 2/3 league matches for Semi-Finals\n• Referee decisions are final\n\nREGISTRATION FEE: Rs. 99/- per Head",
     details: {
       type: "Team (7)",
       rounds: "League + Knockout",
