@@ -63,9 +63,9 @@ const eventsData = [
     title: "THE TRIWIZARD MARKETING TOURNAMENT",
     subtitle: "Marketing",
     icon: "🪄",
-    description: "Step into a world where marketing meets magic. We invite you to battle it out in a high-energy, strategy-driven competition inspired by the Triwizard Tournament. Test your marketing knowledge, creativity, and strategic thinking across thrilling wizard-themed challenges. Only the sharpest minds will rise—do you have what it takes to claim the cup?\n\nGUIDELINES:\n• Teams must consist of 3 participants from the same institution\n• 3 Rounds will be conducted:\n  - Day 1: 2 Rounds\n  - Day 2: 1 Round\n• Qualifying teams must come prepared to stay overnight on campus\n• Personal laptops must be brought by the participants\n• Adherence to time limits and event formalities is mandatory\n• The judges’ decision will be final and cannot be contested\n\nREGISTRATION FEE: ₹199/- per head",
+    description: "Step into a world where marketing meets magic. We invite you to battle it out in a high-energy, strategy-driven competition inspired by the Triwizard Tournament. Test your marketing knowledge, creativity, and strategic thinking across thrilling wizard-themed challenges. Only the sharpest minds will rise—do you have what it takes to claim the cup?\n\nGUIDELINES:\n• Teams must consist of \"3-4\" participants from the same institution\n• 3 Rounds will be conducted:\n  - Day 1: 2 Rounds\n  - Day 2: 1 Round\n• Qualifying teams must come prepared to stay overnight on campus\n• Personal laptops must be brought by the participants\n• Adherence to time limits and event formalities is mandatory\n• The judges’ decision will be final and cannot be contested\n\nREGISTRATION FEE: ₹199/- per head",
     details: {
-      type: "Team (3)",
+      type: "Team (\"3-4\")",
       rounds: "3 Rounds",
       prize: "1st: ₹12k, 2nd: ₹6k",
       eligibility: "Marketing Enthusiasts"
@@ -199,9 +199,9 @@ const eventsData = [
     title: "HOOPS & HALLOWS: THE WIZARD’S COURT",
     subtitle: "Basketball",
     icon: "🏀",
-    description: "Step onto the pitch for an enchanting basketball experience where magic meets the hardwood. Whether you’re a Gryffindor at heart or possess Slytherin ambition, teams must use their best 'spells' and strategies to outmaneuver their rivals. Only one team will claim eternal glory!\n\nGUIDELINES:\n• Team Composition: 7 players (5 main + 2 substitutes)\n• Format: Knockout Tournament\n• Rules: FIBA Rules\n• Referee’s decision is final\n• Unsportsmanlike behavior = Disqualification\n\nREGISTRATION FEE: Rs. 149/- Per Head",
+    description: "Step onto the pitch for an enchanting basketball experience where magic meets the hardwood. Whether you’re a Gryffindor at heart or possess Slytherin ambition, teams must use their best 'spells' and strategies to outmaneuver their rivals. Only one team will claim eternal glory!\n\nGUIDELINES:\n• Team Composition: Min 5 and Max 7 participants\n• Format: Knockout Tournament\n• Rules: FIBA Rules\n• Referee’s decision is final\n• Unsportsmanlike behavior = Disqualification\n\nREGISTRATION FEE: Rs. 149/- Per Head",
     details: {
-      type: "Team (7)",
+      type: "Team (5-7)",
       rounds: "Knockout",
       prize: "1st: ₹6k, 2nd: ₹3k",
       eligibility: "Basketball Teams"
